@@ -7,12 +7,11 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="濟州簡述">
 <meta name="theme-color" content="#b06b54">
-<title>🍊 濟州 8 天 · 簡述版</title>
+<title>🍊 濟州 8 天 · 簡述版 v2.0</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;background:#f5f1eb;color:#3a3128;max-width:400px;margin:0 auto;padding-bottom:80px;line-height:1.6;font-size:14.5px}
 
-/* Header */
 .header{background:linear-gradient(135deg,#b06b54 0%,#c9886b 50%,#d4a574 100%);color:#fffaf6;padding:18px 16px 14px;position:sticky;top:0;z-index:100;box-shadow:0 2px 14px rgba(176,107,84,0.25);overflow:hidden}
 .header::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;background:radial-gradient(circle,rgba(255,255,255,0.15) 0%,transparent 70%);border-radius:50%}
 .header::after{content:'🍊';position:absolute;bottom:-12px;right:14px;font-size:60px;opacity:0.15;transform:rotate(-15deg)}
@@ -20,17 +19,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
 .header .sub{font-size:11.5px;opacity:0.95;position:relative;z-index:2;letter-spacing:0.3px}
 .header .back{display:inline-block;margin-top:6px;font-size:11px;background:rgba(255,255,255,0.25);padding:3px 10px;border-radius:10px;color:#fffaf6;text-decoration:none;font-weight:600;position:relative;z-index:2}
 
-/* TOC anchor nav */
 .toc{display:flex;gap:6px;padding:10px 14px;background:#fffaf6;border-bottom:1px solid #e8dfd2;overflow-x:auto;position:sticky;top:74px;z-index:99}
 .toc::-webkit-scrollbar{display:none}
 .toc a{padding:6px 11px;border-radius:14px;font-size:12px;color:#8a7560;text-decoration:none;font-weight:600;white-space:nowrap;background:#f5f1eb;flex-shrink:0}
-.toc a:hover{background:#e8dfd2;color:#b06b54}
 
 .section{padding:16px 14px}
 .section-title{font-size:16px;font-weight:700;color:#b06b54;margin-bottom:6px;padding-bottom:6px;border-bottom:2px solid #e8dfd2;display:flex;align-items:center;gap:6px}
 .section-sub{font-size:11.5px;color:#8a7560;margin-bottom:14px;line-height:1.55}
 
-/* 待討論卡 */
 .discuss-item{background:#fffaf6;border-radius:12px;padding:12px 14px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,0.04);border-left:3px solid #d4a574}
 .discuss-item.flag{border-left-color:#b85a3f;background:#fff5ef}
 .discuss-item .q{font-size:13.5px;font-weight:700;color:#3a3128;margin-bottom:6px}
@@ -38,7 +34,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
 .discuss-item .options strong{color:#b06b54;font-weight:700}
 .discuss-item .note{font-size:11px;color:#b85a3f;margin-top:6px;background:#fdebe3;padding:4px 8px;border-radius:6px;display:inline-block}
 
-/* 行程簡述 */
 .day-row{background:#fffaf6;border-radius:10px;padding:10px 12px;margin-bottom:8px;display:flex;gap:10px;align-items:flex-start;box-shadow:0 1px 5px rgba(0,0,0,0.04)}
 .day-row .day-num{flex-shrink:0;width:42px;text-align:center;background:linear-gradient(135deg,#b06b54,#c9886b);color:#fffaf6;border-radius:8px;padding:4px 0;font-size:11px;font-weight:700;line-height:1.3}
 .day-row .day-num .n{font-size:15px;display:block;font-family:'Inter',sans-serif}
@@ -46,11 +41,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
 .day-row .body .head{font-size:13px;font-weight:700;color:#3a3128;margin-bottom:3px;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
 .day-row .body .desc{font-size:12px;color:#5a4a3f;line-height:1.55}
 .tag{display:inline-block;font-size:10px;padding:1px 7px;border-radius:8px;font-weight:600;letter-spacing:0.3px}
-.tag-tour{background:#fce8d4;color:#a87035}
 .tag-self{background:#dde6e8;color:#5a7355}
 .tag-fly{background:#e8dfd2;color:#7a5a3f}
+.tag-shop{background:#f4d8e8;color:#a04575}
 
-/* 餐廳簡述 */
+.zone-tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:6px;background:#fff3e6;color:#a87035;font-weight:600;margin-left:4px}
+
 .meal-row{background:#fffaf6;border-radius:10px;padding:10px 12px;margin-bottom:8px;box-shadow:0 1px 5px rgba(0,0,0,0.04);display:flex;gap:10px;align-items:center}
 .meal-row .priority{flex-shrink:0;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fffaf6}
 .priority.p1{background:#b85a3f}
@@ -60,14 +56,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
 .meal-row .meal-when{font-size:11px;color:#8a7560;text-align:right;line-height:1.3}
 .meal-row .meal-when strong{color:#b06b54;display:block}
 
+.naver-link{display:inline-block;background:#dff0e0;color:#03c75a;font-size:10px;padding:2px 7px;border-radius:10px;text-decoration:none;font-weight:600;margin-left:5px;border:1px solid #a8d4ad}
+
 .bottom-nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);background:#b06b54;color:#fffaf6;padding:10px 18px;border-radius:24px;font-size:12.5px;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(176,107,84,0.4);z-index:200;display:flex;align-items:center;gap:6px}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>🍊 濟州 8 天 · 簡述</h1>
-  <div class="sub">行程 + 餐廳速覽 · 給家人快速看的版本</div>
+  <h1>🍊 濟州 8 天 · 簡述 v2.0</h1>
+  <div class="sub">新地圖完整攻略 · 給家人快速看的版本</div>
   <a class="back" href="index.html">← 回完整版</a>
 </div>
 
@@ -77,7 +75,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
   <a href="#meals">🍽️ 餐廳</a>
 </div>
 
-<!-- ===== 待討論調整 ===== -->
+<!-- 待討論 -->
 <div class="section" id="discuss">
 <div class="section-title">💬 待討論調整</div>
 <div class="section-sub">需要全家拍板的決定 · 請在群組或會議裡確認</div>
@@ -88,175 +86,177 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
 </div>
 
 <div class="discuss-item flag">
-  <div class="q">2️⃣ 「牛島豬排 ON OFF」要不要？</div>
-  <div class="options"><strong>A.</strong> 去｜<strong>B.</strong> 跳過、繼續玩</div>
-  <div class="note">⚠️ 牛島已改 Day 2 跟團、午餐由導遊推 3 家島上店、是否還能自行選餐廳請先跟 Trip 確認</div>
-</div>
-
-<div class="discuss-item">
-  <div class="q">3️⃣ Day 4 晚 熟成到 中文店 vs 濟州總店</div>
-  <div class="options"><strong>A.</strong> 中文店｜<strong>B.</strong> 濟州總店</div>
+  <div class="q">2️⃣ Day 3 西部 Airbnb 訂哪間？</div>
+  <div class="options">需要 4 間房 / 8 人住、有烤肉設備、靠近郭支海灘最好</div>
+  <div class="note">⚠️ 6 月底是旺季、越早訂越好、Booking / Airbnb / Agoda 比價</div>
 </div>
 
 <div class="discuss-item flag">
-  <div class="q">4️⃣ Day 5 史努比後要去哪？</div>
-  <div class="options"><strong>A.</strong> 翰林公園｜<strong>B.</strong> 飯店泳池｜<strong>C.</strong> 海邊咖啡</div>
-  <div class="note">⚠️ 現行 Day 5 是涉地可支+水族館、沒有史努比 → 此題是否還適用要先確認</div>
+  <div class="q">3️⃣ Regent Marine 訂幾晚？</div>
+  <div class="options">Day 1+2+4+5+6+7 共 6 晚（Day 3 住 Airbnb 西部、Day 8 退房）</div>
+  <div class="note">⚠️ Day 3 大行李留 Regent / 全部帶去 Airbnb 兩種做法要決定</div>
 </div>
 
 <div class="discuss-item">
-  <div class="q">5️⃣ Day 6 醫美診所選哪家</div>
-  <div class="options"><strong>A.</strong> WITH Clinic｜<strong>B.</strong> NOWMEDI｜<strong>C.</strong> PPEUM</div>
+  <div class="q">4️⃣ Day 2 烤肉：城山 vs 東門市場</div>
+  <div class="options"><strong>A.</strong> 城山日出峰附近黑豬肉烤肉（地圖主推）｜<strong>B.</strong> 開回市區東門市場小吃</div>
+</div>
+
+<div class="discuss-item flag">
+  <div class="q">5️⃣ Day 6 醫美項目 & 預算</div>
+  <div class="options">Now Medi 強項 ONDA / 肉毒 / 痘疤 · 各人想做什麼先 LINE 諮詢</div>
+  <div class="note">⚠️ 2026 起無法退稅、預算要重估</div>
 </div>
 
 <div class="discuss-item">
-  <div class="q">6️⃣ Day 6 晚 韓牛餐廳</div>
-  <div class="options"><strong>A.</strong> Hwasumok（推）｜<strong>B.</strong> Yeondong Gongyuk</div>
+  <div class="q">6️⃣ Day 4 Camellia Hill 6 月有沒有花？</div>
+  <div class="options">6 月底主花季已過、可能改看繡球花。要先查當週花況、不值得就改去其他南部景點</div>
 </div>
 
 <div class="discuss-item">
-  <div class="q">7️⃣ Day 7 中午分組</div>
-  <div class="options"><strong>A.</strong> 全員明進鮑魚｜<strong>B.</strong> 大人組醬蟹｜<strong>C.</strong> 全員醬蟹</div>
+  <div class="q">7️⃣ Day 6-7 購物分組</div>
+  <div class="options">蓮洞 / 七星街 / 地下街 / Hi Jeju / Martro 要分天逛還是全跑？太太們和爸爸們要不要分頭</div>
 </div>
 
 <div class="discuss-item">
-  <div class="q">8️⃣ Day 6 晚去賭場？</div>
-  <div class="options"><strong>A.</strong> 我要去！（爸爸局）｜<strong>B.</strong> 飯店休息</div>
-</div>
-
-<div class="discuss-item">
-  <div class="q">9️⃣ Sehwa 排骨備案要排哪天？</div>
-  <div class="options">原 Day 2 安排、跟團後挪備案 · 看要不要塞 Day 5 中午 / Day 7 中午、或乾脆放棄</div>
+  <div class="q">8️⃣ Day 7 伴手禮：誰負責買哪些</div>
+  <div class="options">公司同事 / 親戚 / 自家 三類分開列清單、避免重複買</div>
 </div>
 </div>
 
-<!-- ===== 行程簡述 ===== -->
+<!-- 行程簡述 -->
 <div class="section" id="trip">
 <div class="section-title">📅 行程簡述</div>
-<div class="section-sub">每天一行 · 含交通方式</div>
+<div class="section-sub">每天一行 · 含區域</div>
 
 <div class="day-row">
   <div class="day-num"><span class="n">1</span>6/24<br>三</div>
   <div class="body">
-    <div class="head">🛬 抵達日 <span class="tag tag-fly">包車接機</span></div>
-    <div class="desc">機場 → 麗晶飯店 check-in、晚餐附近吃</div>
+    <div class="head">🛬 抵達日 <span class="zone-tag">北部</span> <span class="tag tag-fly">包車</span></div>
+    <div class="desc">機場 → Regent Marine 入住 → 晚餐 → 海邊散步</div>
   </div>
 </div>
 
 <div class="day-row">
-  <div class="day-num"><span class="n">2</span>6/25<br>四</div>
+  <div class="day-num"><span class="n">2</span>6/25<br>三</div>
   <div class="body">
-    <div class="head">🐄 牛島一日 <span class="tag tag-tour">🎫 跟團</span></div>
-    <div class="desc">Trip.com 小巴上門接送 → 城山日出峰 → 牛島環島 → 回飯店</div>
+    <div class="head">🐄 牛島 + 城山 <span class="zone-tag">東部</span> <span class="tag tag-self">🚗 自駕</span></div>
+    <div class="desc">取車 → 牛島環島 → 城山日出峰 → 城山黑豬肉烤肉</div>
   </div>
 </div>
 
 <div class="day-row">
-  <div class="day-num"><span class="n">3</span>6/26<br>五</div>
+  <div class="day-num"><span class="n">3</span>6/26<br>四</div>
   <div class="body">
-    <div class="head">🌅 取車 · 西部玩沙 <span class="tag tag-self">🚗 自駕</span></div>
-    <div class="desc">上午取車（兒童座椅 ×2）→ 西部玩沙 → <strong>馬雷沃過夜</strong></div>
+    <div class="head">🍵 西部一日 <span class="zone-tag">西部</span> <span class="tag tag-self">🚗 自駕</span></div>
+    <div class="desc">Osulloc → Asisi 香氛 → 郭支海灘 → 涯月咖啡街 → <strong>Airbnb 過夜</strong> → Hanaro 烤肉</div>
   </div>
 </div>
 
 <div class="day-row">
-  <div class="day-num"><span class="n">4</span>6/27<br>六</div>
+  <div class="day-num"><span class="n">4</span>6/27<br>五</div>
   <div class="body">
-    <div class="head">🍵 西部延伸 · 回麗晶 <span class="tag tag-self">🚗 自駕</span></div>
-    <div class="desc">馬雷沃 → 西部景點 → 回麗晶飯店、晚餐熟成到</div>
+    <div class="head">🌺 南部花園 <span class="zone-tag">南部</span> <span class="tag tag-self">🚗 自駕</span></div>
+    <div class="desc">Camellia Hill → 柱狀節理帶 → 偶來市場 → 橘子炸雞 → 回市區</div>
   </div>
 </div>
 
 <div class="day-row">
-  <div class="day-num"><span class="n">5</span>6/28<br>日</div>
+  <div class="day-num"><span class="n">5</span>6/28<br>六</div>
   <div class="body">
-    <div class="head">🌅 東邊景點日 <span class="tag tag-self">🚗 自駕</span></div>
-    <div class="desc">松樹咖啡 → 涉地可支 + Glass House → 水族館 → 姐妹麵條</div>
+    <div class="head">🐟 親子放電日 <span class="zone-tag">東部</span> <span class="tag tag-self">🚗 自駕</span></div>
+    <div class="desc">Aqua Planet → 我們麵館 → Snoopy Garden → 下午茶 → 飯店</div>
   </div>
 </div>
 
 <div class="day-row">
-  <div class="day-num"><span class="n">6</span>6/29<br>一</div>
+  <div class="day-num"><span class="n">6</span>6/29<br>日</div>
   <div class="body">
-    <div class="head">💆 醫美 · 韓牛 · 賭場 <span class="tag tag-self">🚗 自駕</span></div>
-    <div class="desc">白天醫美（自費）→ Hwasumok 韓牛 → 賭場夜（爸爸局）</div>
+    <div class="head">💆 醫美 + 蓮洞 <span class="zone-tag">北部</span> <span class="tag tag-shop">🛍️ 購物</span></div>
+    <div class="desc">Now Medi → Olive Young → 七星街 → 蓮洞商圈 → 地下街</div>
   </div>
 </div>
 
 <div class="day-row">
-  <div class="day-num"><span class="n">7</span>6/30<br>二</div>
+  <div class="day-num"><span class="n">7</span>6/30<br>一</div>
   <div class="body">
-    <div class="head">🎢 9.81 · 西歸浦 · 大趴 <span class="tag tag-self">🚗 自駕</span></div>
-    <div class="desc">9.81 Park 卡丁車 → 西歸浦 → 中午分組 → 晚 Noraba 海鮮泡麵</div>
+    <div class="head">🎁 伴手禮日 <span class="zone-tag">北部</span> <span class="tag tag-shop">🛍️ 購物</span></div>
+    <div class="desc">Hi Jeju → Martro → 三地補貨 → 海邊散步 → 整理行李</div>
   </div>
 </div>
 
 <div class="day-row">
-  <div class="day-num"><span class="n">8</span>7/1<br>三</div>
+  <div class="day-num"><span class="n">8</span>7/01<br>二</div>
   <div class="body">
     <div class="head">✈️ 回家 <span class="tag tag-fly">機場還車</span></div>
-    <div class="desc">08:30 開車到機場還車 → 搭機回台</div>
+    <div class="desc">退房 → 開車到機場還車 → 搭機回台</div>
   </div>
 </div>
 </div>
 
-<!-- ===== 餐廳簡述 ===== -->
+<!-- 餐廳清單 -->
 <div class="section" id="meals">
 <div class="section-title">🍽️ 餐廳清單</div>
-<div class="section-sub">🔴 必訂｜🟡 預約｜🟢 現場 / 備案</div>
+<div class="section-sub">必吃美食 + Naver 一鍵導航</div>
 
 <div class="meal-row">
   <div class="priority p1">1</div>
-  <div class="meal-name">🔴 姐妹麵條</div>
-  <div class="meal-when"><strong>Day 5 晚</strong>Catch Table 當天 15:20</div>
+  <div class="meal-name">🥩 城山黑豬肉烤肉<a class="naver-link" href="https://map.naver.com/p/search/성산일출봉%20흑돼지" target="_blank">📍</a></div>
+  <div class="meal-when"><strong>Day 2 晚</strong>看完日出峰</div>
 </div>
 
 <div class="meal-row">
   <div class="priority p1">2</div>
-  <div class="meal-name">🔴 熟成到（中文店）</div>
-  <div class="meal-when"><strong>Day 4 晚</strong>提前 1 週預約</div>
+  <div class="meal-name">🍜 我們麵館 黑豬肉麵<a class="naver-link" href="https://map.naver.com/p/search/우리국수" target="_blank">📍</a></div>
+  <div class="meal-when"><strong>Day 5 午</strong>水族館後</div>
 </div>
 
 <div class="meal-row">
   <div class="priority p1">3</div>
-  <div class="meal-name">🔴 Hwasumok 韓牛</div>
-  <div class="meal-when"><strong>Day 6 晚</strong>提前 1 週預約</div>
+  <div class="meal-name">🍗 橘子炸雞<a class="naver-link" href="https://map.naver.com/p/search/마농치킨" target="_blank">📍</a></div>
+  <div class="meal-when"><strong>Day 4 晚</strong>偶來市場後</div>
 </div>
 
 <div class="meal-row">
   <div class="priority p2">!</div>
-  <div class="meal-name">🟡 Noraba 海鮮泡麵</div>
-  <div class="meal-when"><strong>Day 7 晚</strong>現場候位 1hr</div>
+  <div class="meal-name">🥩 Airbnb 自烤<a class="naver-link" href="https://map.naver.com/p/search/하나로마트%20애월" target="_blank">📍 Hanaro</a></div>
+  <div class="meal-when"><strong>Day 3 晚</strong>Hanaro 採買</div>
+</div>
+
+<div class="meal-row">
+  <div class="priority p2">!</div>
+  <div class="meal-name">☕ Haejigae Cafe<a class="naver-link" href="https://map.naver.com/p/search/해지개카페" target="_blank">📍</a></div>
+  <div class="meal-when"><strong>Day 3 下午</strong>奶油拿鐵</div>
+</div>
+
+<div class="meal-row">
+  <div class="priority p2">!</div>
+  <div class="meal-name">🍵 Osulloc 茶博物館<a class="naver-link" href="https://map.naver.com/p/search/오설록티뮤지엄" target="_blank">📍</a></div>
+  <div class="meal-when"><strong>Day 3 早</strong>抹茶冰</div>
 </div>
 
 <div class="meal-row">
   <div class="priority p3">·</div>
-  <div class="meal-name">🟢 松樹咖啡</div>
-  <div class="meal-when"><strong>Day 5 早</strong>現場排</div>
+  <div class="meal-name">🛒 偶來市場小吃<a class="naver-link" href="https://map.naver.com/p/search/서귀포올레시장" target="_blank">📍</a></div>
+  <div class="meal-when"><strong>Day 4 下午</strong>海鮮粥 / 鮑魚粥</div>
 </div>
 
 <div class="meal-row">
   <div class="priority p3">·</div>
-  <div class="meal-name">🟢 倫敦貝果</div>
-  <div class="meal-when"><strong>Day 5 早</strong>現場排</div>
+  <div class="meal-name">🛒 東門市場（備案）<a class="naver-link" href="https://map.naver.com/p/search/동문시장" target="_blank">📍</a></div>
+  <div class="meal-when"><strong>Day 2 備案</strong>烤肉不順時</div>
 </div>
 
 <div class="meal-row">
   <div class="priority p3">·</div>
-  <div class="meal-name">🟢 청솔밥상（현금）</div>
-  <div class="meal-when"><strong>Day 4 中</strong>現場 · 現金</div>
+  <div class="meal-name">🍴 飯店附近</div>
+  <div class="meal-when"><strong>Day 1 / 6 / 7 晚</strong>自由發揮</div>
 </div>
 
 <div class="meal-row">
   <div class="priority p3">·</div>
-  <div class="meal-name">🟢 Ollae 麵條</div>
-  <div class="meal-when"><strong>早餐</strong>現場排</div>
-</div>
-
-<div class="meal-row">
-  <div class="priority p3">?</div>
-  <div class="meal-name">🟢 Sehwa 排骨（備案）</div>
-  <div class="meal-when"><strong>未排日</strong>Naver 預約</div>
+  <div class="meal-name">🍴 中文觀光區午餐</div>
+  <div class="meal-when"><strong>Day 4 中</strong>南部</div>
 </div>
 </div>
 
