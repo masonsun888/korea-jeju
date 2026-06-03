@@ -84,6 +84,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
 .tag-spot{background:#dde6e8;color:#5a6e75}
 .tag-self{background:#dde6e8;color:#3a5a6a}
 .tag-hot{background:#fce8d4;color:#a87035}
+.tag-tbd{background:#fdebe3;color:#b85a3f;border:1px solid #f0c4b8}
+.status-mark{font-size:10.5px;padding:2px 7px;border-radius:10px;font-weight:700;margin-left:3px;display:inline-block}
 
 .link-row{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
 .link-pill{font-size:10.5px;padding:4px 8px;border-radius:14px;text-decoration:none;font-weight:600;border:1px solid;display:inline-flex;align-items:center;gap:3px}
@@ -375,23 +377,33 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
     <div class="day-title">Day 1　🛬 抵達日</div>
     <div class="day-date">6/24 (三)</div>
   </div>
-  <div class="day-theme">傍晚抵達 → 飯店 → 晚餐 → 海邊散步</div>
+  <div class="day-theme">高雄出發 → 傍晚抵達 → 飯店 → 晚餐 → 海邊散步</div>
   <div class="timeline">
     <div class="event">
+      <div class="event-time">13:00</div>
+      <div class="event-title">🚕 KHH 機場集合</div>
+      <div class="event-desc">起飛前 2.5hr 到、國際線報到櫃台</div>
+    </div>
+    <div class="event">
+      <div class="event-time">15:55</div>
+      <div class="event-title">✈️ KHH 高雄起飛</div>
+      <div class="event-desc">航程約 3hr 20m</div>
+    </div>
+    <div class="event">
       <div class="event-time">19:15</div>
-      <div class="event-title">✈️ CJU 抵達</div>
-      <div class="event-desc">KHH 15:55 → CJU 19:15、約 3hr 20m</div>
+      <div class="event-title">🛬 CJU 濟州抵達</div>
+      <div class="event-desc">入境 + 領行李、約 30-45 分</div>
     </div>
     <div class="event">
       <div class="event-time">20:30</div>
       <div class="event-title">🏨 Regent Marine The Blue Check-in</div>
-      <div class="event-desc">海景飯店、位置超方便、連住 D1+D2+D5+D6+D7</div>
+      <div class="event-desc">海景飯店、位置超方便、連住 D1+D2+D4+D5+D6+D7</div>
       <div class="link-row"><a class="link-pill link-naver" href="https://map.naver.com/p/search/리젠트마린더블루" target="_blank">📍 Naver</a></div>
     </div>
     <div class="event">
       <div class="event-time">21:00</div>
-      <div class="event-title">🍴 晚餐</div>
-      <div class="event-desc">附近隨便吃 / 外送炸雞 / 便利店買真露房間小酌</div>
+      <div class="event-title">🍴 晚餐 <span class="status-mark" style="background:#fdebe3;color:#b85a3f">❓ 待討論</span></div>
+      <div class="event-desc">飯店附近 / 外送炸雞 / 便利店真露房間小酌</div>
     </div>
     <div class="event">
       <div class="event-time">22:00</div>
@@ -408,13 +420,29 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
     <div class="day-title">Day 2　🐄 牛島 + 城山 <span class="tag tag-self">🚗 自駕</span></div>
     <div class="day-date">6/25 (三)</div>
   </div>
-  <div class="day-theme">租車取車 → 牛島環島 → 城山日出峰 → 黑豬肉烤肉</div>
+  <div class="day-theme">07:00 飯店出發 → 08:00 取車 → 牛島 → 城山日出峰 → 烤肉</div>
   <div class="timeline">
     <div class="event">
-      <div class="event-time">08:30</div>
-      <div class="event-title">🚗 機場附近租車取車</div>
-      <div class="event-desc">兩台車（Carnival + Tucson）、兒童座椅 ×2</div>
-      <div class="event-note">⚠️ 國際駕照 ×3、租 6 天到 Day 8 機場還</div>
+      <div class="event-time">06:30</div>
+      <div class="event-title">🥐 飯店早餐 + 退房手續</div>
+      <div class="event-desc">行李留 Regent / 全部帶上車</div>
+    </div>
+    <div class="event">
+      <div class="event-time">07:00</div>
+      <div class="event-title">🚕 Regent Marine 出發 · 計程車到取車點</div>
+      <div class="event-desc">飯店 → Jeju Auto House、約 10-15 分鐘</div>
+    </div>
+    <div class="event">
+      <div class="event-time">08:00</div>
+      <div class="event-title">🚗 取車 Jeju Auto House <span class="status-mark" style="background:#d3e4cd;color:#3d6837">✅ 已訂</span></div>
+      <div class="event-desc"><strong>CARNIVAL (D) 9P</strong> · 預訂編號 2622356102<br>含 CDW 全險 + 兒童座椅 + Stroller</div>
+      <div class="event-note">📍 92, Yonghae-ro, Jeju-si · 06:00-23:00</div>
+      <div class="link-row"><a class="link-pill link-naver" href="https://map.naver.com/p/search/제주공항%20제주오토하우스" target="_blank">📍 Naver 取車</a></div>
+    </div>
+    <div class="event">
+      <div class="event-time">09:00</div>
+      <div class="event-title">🛣️ 開往城山港</div>
+      <div class="event-desc">車程約 1hr、走 1132 號公路看海</div>
     </div>
     <div class="event">
       <div class="event-time">10:00</div>
@@ -424,7 +452,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
     </div>
     <div class="event">
       <div class="event-time">10:30 → 15:30</div>
-      <div class="event-title">🏖️ 牛島環島</div>
+      <div class="event-title">🏖️ 牛島環島 <span class="status-mark" style="background:#fdebe3;color:#b85a3f">❓ 午餐待討論</span></div>
       <div class="event-desc">白沙灘、燈塔、海景咖啡、騎車環島超療癒<br>Hagosudong 沙灘、花生冰、Hahahoho 漢堡</div>
     </div>
     <div class="event">
@@ -481,8 +509,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
     </div>
     <div class="event">
       <div class="event-time">17:00</div>
-      <div class="event-title">🏡 Airbnb 西部 Check-in</div>
-      <div class="event-desc">入住體驗濟州民宿、放行李</div>
+      <div class="event-title">🏡 Airbnb 西部 Check-in <span class="status-mark" style="background:#d3e4cd;color:#3d6837">✅ 已訂</span></div>
+      <div class="event-desc"><strong>西部民宿</strong> · 8 人房（6 大 2 小）<br>Check-in 6/26、Check-out 6/27、1 晚</div>
+      <div class="event-note">📍 詳細地址 / wifi / 門卡 / 停車見訂房連結（建議出發前先存截圖）</div>
+      <div class="link-row">
+        <a class="link-pill link-web" href="https://www.airbnb.com.tw/rooms/1395226374649015790?check_in=2026-06-26&check_out=2026-06-27&guests=8&adults=6&children=2" target="_blank">🔗 Airbnb 訂房</a>
+      </div>
     </div>
     <div class="event">
       <div class="event-time">18:00</div>
@@ -675,21 +707,33 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
     <div class="day-title">Day 8　✈️ 回家</div>
     <div class="day-date">7/01 (二)</div>
   </div>
-  <div class="day-theme">飯店退房 → 機場還車 → 回台灣</div>
+  <div class="day-theme">飯店退房 → 08:00 還車 → 機場 → 回台灣</div>
   <div class="timeline">
     <div class="event">
-      <div class="event-time">07:30</div>
+      <div class="event-time">06:30</div>
       <div class="event-title">🥐 飯店早餐 + 打包</div>
     </div>
     <div class="event">
-      <div class="event-time">08:30</div>
-      <div class="event-title">🏨 退房</div>
+      <div class="event-time">07:00</div>
+      <div class="event-title">🏨 Regent Marine 退房</div>
       <div class="event-desc">Check-out、行李上車</div>
     </div>
     <div class="event">
-      <div class="event-time">09:00</div>
-      <div class="event-title">🚗 機場還車</div>
-      <div class="event-desc">開到機場還車（省一筆送機包車）</div>
+      <div class="event-time">07:30</div>
+      <div class="event-title">🚗 出發 → Jeju Auto House</div>
+      <div class="event-desc">車程約 10-15 分鐘</div>
+    </div>
+    <div class="event">
+      <div class="event-time">08:00</div>
+      <div class="event-title">🔑 還車 Jeju Auto House</div>
+      <div class="event-desc">同地點還車、檢查油箱 / 里程 / 車況</div>
+      <div class="event-note">⚠️ 預訂編號 2622356102、總額 ₩987,600 已付</div>
+      <div class="link-row"><a class="link-pill link-naver" href="https://map.naver.com/p/search/제주공항%20제주오토하우스" target="_blank">📍 Naver</a></div>
+    </div>
+    <div class="event">
+      <div class="event-time">08:30</div>
+      <div class="event-title">🚕 還車店 → 機場航廈</div>
+      <div class="event-desc">店家有 shuttle 接駁 / 計程車 5 分鐘</div>
     </div>
     <div class="event">
       <div class="event-time">12:00</div>
@@ -703,44 +747,54 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
 <!-- ===== 3. 交通 ===== -->
 <div class="section" id="car">
 <div class="section-title">🚗 交通完整安排</div>
-<div class="section-sub">全程自駕、Day 2 取車、Day 8 機場還車 = 7 天</div>
+<div class="section-sub">租車已訂 ✅ · Day 2 取車、Day 8 還車 = 7 天</div>
 
-<div class="card">
-  <div class="card-title">🚙 7 人座車款比較</div>
-  <div class="compare-table">
-    <table>
-      <thead><tr><th>車款</th><th>SK</th><th>Klook</th><th>Trip</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Carnival</strong></td><td class="price">NT$2,200</td><td class="price">NT$2,400</td><td class="price">NT$2,100</td></tr>
-        <tr><td><strong>Staria</strong></td><td class="price">NT$2,300</td><td class="price">NT$2,500</td><td class="price">NT$2,200</td></tr>
-        <tr><td><strong>Sorento</strong></td><td class="price">NT$1,800</td><td class="price">NT$1,900</td><td class="price">NT$1,700</td></tr>
-      </tbody>
-    </table>
+<div class="card" style="border-left:4px solid #5a7355;background:#f7fbf6">
+  <div class="card-title" style="color:#3d6837">✅ 租車預訂確認</div>
+  <div class="card-sub">CARNIVAL (D) 9P · Minivan · 預訂編號 <span style="font-family:Inter,sans-serif">2622356102</span></div>
+  <div class="card-row"><span>車款</span><span>Kia Carnival 9 人座</span></div>
+  <div class="card-row"><span>免責險</span><span>CDW 0 KRW Excess（全險）</span></div>
+  <div class="card-row"><span>附加</span><span>兒童座椅 + Convertible Stroller</span></div>
+  <div class="card-row"><span>總金額</span><span style="color:#b85a3f">₩987,600（≈NT$21,727）</span></div>
+  <div style="display:flex;gap:8px;margin-top:10px">
+    <div style="flex:1;background:#e3ebde;padding:10px;border-radius:8px">
+      <div style="font-size:10.5px;color:#5a7355;font-weight:700;margin-bottom:2px">🟢 取車</div>
+      <div style="font-size:14px;font-weight:700;color:#3a3128">6/25 (三) 08:00</div>
+      <div style="font-size:11px;color:#5a4a3f;margin-top:3px">Jeju Auto House<br>92, Yonghae-ro</div>
+    </div>
+    <div style="flex:1;background:#fdf0e6;padding:10px;border-radius:8px">
+      <div style="font-size:10.5px;color:#a87035;font-weight:700;margin-bottom:2px">🔴 還車</div>
+      <div style="font-size:14px;font-weight:700;color:#3a3128">7/01 (二) 08:00</div>
+      <div style="font-size:11px;color:#5a4a3f;margin-top:3px">同地點<br>（機場附近）</div>
+    </div>
   </div>
-  <div class="warn">💡 推薦 <strong>Kia Carnival</strong>：最寬敞、Trip.com 最便宜</div>
+  <div class="warn" style="margin-top:8px;font-size:11px">⚠️ 取車點營業時間 06:00-23:00、開錯時間進不去</div>
+  <div class="link-row" style="margin-top:6px"><a class="link-pill link-naver" href="https://map.naver.com/p/search/제주공항%20제주오토하우스" target="_blank">📍 Naver 取/還車點</a></div>
+</div>
+
+<div class="card" style="border-left:4px solid #d896c5;background:#fdf6fa">
+  <div class="card-title" style="color:#a04575">✅ Day 3 Airbnb 西部</div>
+  <div class="card-sub">8 人房 · 6 大 2 小 · 1 晚</div>
+  <div class="card-row"><span>Check-in</span><span>6/26 (四)</span></div>
+  <div class="card-row"><span>Check-out</span><span>6/27 (五)</span></div>
+  <div class="card-row"><span>大行李</span><span>留 Regent Marine</span></div>
+  <div class="card-row"><span>只帶</span><span>1 晚換洗 + 烤肉用品</span></div>
+  <div class="link-row" style="margin-top:8px">
+    <a class="link-pill link-web" href="https://www.airbnb.com.tw/rooms/1395226374649015790?check_in=2026-06-26&check_out=2026-06-27&guests=8&adults=6&children=2" target="_blank">🔗 Airbnb 訂房連結</a>
+  </div>
+  <div class="warn" style="margin-top:6px;font-size:11px">⚠️ 出發前先把房東地址 / Wifi / 門卡訊息存截圖</div>
 </div>
 
 <div class="card">
-  <div class="card-title">🚗 5 人座車款比較</div>
-  <div class="compare-table">
-    <table>
-      <thead><tr><th>車款</th><th>SK</th><th>Klook</th><th>Trip</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Tucson</strong></td><td class="price">NT$1,500</td><td class="price">NT$1,600</td><td class="price">NT$1,400</td></tr>
-        <tr><td><strong>Sportage</strong></td><td class="price">NT$1,400</td><td class="price">NT$1,500</td><td class="price">NT$1,300</td></tr>
-        <tr><td><strong>Avante</strong></td><td class="price">NT$1,200</td><td class="price">NT$1,300</td><td class="price">NT$1,100</td></tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-title">💰 租車總費用</div>
-  <div class="card-row"><span>Carnival 7 天</span><span>NT$ 14,700</span></div>
-  <div class="card-row"><span>Tucson 7 天</span><span>NT$ 9,800</span></div>
-  <div class="card-row"><span>兒童座椅 ×2</span><span>NT$ 1,000</span></div>
-  <div class="card-row"><span>保險升級</span><span>NT$ 2,000</span></div>
-  <div class="card-row"><span style="color:#b06b54;font-weight:700">總計</span><span style="color:#b06b54">NT$ 27,500</span></div>
+  <div class="card-title">🕐 每日車程估算</div>
+  <div class="card-row"><span>機場 → Regent Marine</span><span>~25 分</span></div>
+  <div class="card-row"><span>Regent → Jeju Auto House</span><span>~10-15 分</span></div>
+  <div class="card-row"><span>Auto House → 城山港</span><span>~1 小時</span></div>
+  <div class="card-row"><span>Osulloc → Airbnb 西部</span><span>~30 分</span></div>
+  <div class="card-row"><span>Airbnb → Camellia Hill</span><span>~40 分</span></div>
+  <div class="card-row"><span>偶來市場 → Regent</span><span>~50 分</span></div>
+  <div class="card-row"><span>Regent → Snoopy Garden</span><span>~40 分</span></div>
+  <div class="card-row"><span>Regent → 蓮洞商圈</span><span>~15 分</span></div>
 </div>
 
 <div class="car-day">
@@ -749,36 +803,64 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
 </div>
 <div class="car-day">
   <div class="car-day-title">Day 2 取車 · 東部自駕</div>
-  <div class="car-detail">上午取車（兒童座椅 ×2）→ 牛島 → 城山 → 烤肉</div>
+  <div class="car-detail">07:00 Regent 出發 → 08:00 取車 → 牛島 → 城山 → 烤肉 → 回 Regent</div>
 </div>
 <div class="car-day">
-  <div class="car-day-title">Day 3 西部 · Airbnb 過夜</div>
-  <div class="car-detail">自駕西部一日 → Airbnb 過夜（大行李留 Regent）</div>
+  <div class="car-day-title">Day 3 西部一日 · Airbnb 過夜</div>
+  <div class="car-detail">Regent → Osulloc → 西部景點 → Airbnb（晚上自烤）</div>
 </div>
 <div class="car-day">
-  <div class="car-day-title">Day 4-7 自駕</div>
-  <div class="car-detail">Day 4 南部、Day 5 東部、Day 6-7 北部市區（晚上停飯店）</div>
+  <div class="car-day-title">Day 4 南部 → 回 Regent</div>
+  <div class="car-detail">Airbnb 退房 → Camellia → 柱狀節理 → 偶來 → 橘子炸雞 → Regent</div>
 </div>
 <div class="car-day">
-  <div class="car-day-title">Day 8 機場還車</div>
-  <div class="car-detail"><strong>08:30 開車到機場還車</strong>、省一筆送機包車</div>
+  <div class="car-day-title">Day 5 東部親子</div>
+  <div class="car-detail">Regent → Aqua Planet → 我們麵館 → Snoopy → Regent</div>
 </div>
-
-<div class="card">
-  <div class="card-title">🌐 訂車平台</div>
-  <a class="btn btn-link" href="https://www.trip.com/cars/" target="_blank">🌐 Trip.com</a>
-  <a class="btn btn-link" href="https://www.klook.com/zh-TW/activity/26073/" target="_blank">🌐 Klook</a>
+<div class="car-day">
+  <div class="car-day-title">Day 6-7 北部市區</div>
+  <div class="car-detail">醫美 / 七星街 / 蓮洞 / Hi Jeju / Martro、晚上停飯店</div>
+</div>
+<div class="car-day">
+  <div class="car-day-title">Day 8 機場還車（同預訂時間）</div>
+  <div class="car-detail"><strong>07:30 Regent 出發 → 08:00 Jeju Auto House 還車</strong>、shuttle 到航廈</div>
 </div>
 </div>
 
 <!-- ===== 4. 餐廳 ===== -->
 <div class="section" id="reserve">
 <div class="section-title">🍽️ 餐廳清單</div>
-<div class="section-sub">新地圖必吃 7 樣 + 各天用餐建議</div>
+<div class="section-sub">已定 6 家 ✅ + 11 餐待討論 ❓</div>
 
 <div class="decision-alert">
   <strong>🍽️ 必吃美食推薦（地圖底部）</strong>
   黑豬肉烤肉 · 我們麵館 · 橘子炸雞 · 海鮮粥 · 鮑魚粥 · 橘子甜點 · 黑糖餅
+</div>
+
+<div class="card" style="border-left:4px solid #b85a3f;background:#fff5ef">
+  <div class="card-title" style="color:#b85a3f">❓ 待討論餐點（11 餐）</div>
+  <div class="card-sub">這幾餐還沒定、群組裡決定一下</div>
+  <div class="card-row"><span>Day 1 晚</span><span>飯店附近 / 外送炸雞</span></div>
+  <div class="card-row"><span>Day 2 午</span><span>牛島島上 3 家挑哪家</span></div>
+  <div class="card-row"><span>Day 2 晚</span><span>城山烤肉 vs 東門市場</span></div>
+  <div class="card-row"><span>Day 3 早</span><span>飯店早餐 / 路上</span></div>
+  <div class="card-row"><span>Day 3 中</span><span>郭支海灘附近 / Osulloc 飽</span></div>
+  <div class="card-row"><span>Day 4 早</span><span>Airbnb 自理 / 順路咖啡</span></div>
+  <div class="card-row"><span>Day 4 中</span><span>中文觀光區挑哪家</span></div>
+  <div class="card-row"><span>Day 5 早</span><span>飯店 / 路上</span></div>
+  <div class="card-row"><span>Day 5 下午茶/晚</span><span>Snoopy 附近 / 海邊咖啡</span></div>
+  <div class="card-row"><span>Day 6 中/晚</span><span>蓮洞韓牛 vs 海鮮</span></div>
+  <div class="card-row"><span>Day 7 三餐</span><span>路上隨機 / 最後一頓</span></div>
+</div>
+
+<div class="card" style="border-left:4px solid #5a7355;background:#f7fbf6">
+  <div class="card-title" style="color:#3d6837">✅ 已定餐點（6 家）</div>
+  <div class="card-row"><span>Day 2 晚</span><span>城山黑豬肉烤肉 ⬇</span></div>
+  <div class="card-row"><span>Day 3 早/點心</span><span>Osulloc ⬇</span></div>
+  <div class="card-row"><span>Day 3 下午茶</span><span>Haejigae Cafe ⬇</span></div>
+  <div class="card-row"><span>Day 3 晚</span><span>Airbnb 自烤（Hanaro）⬇</span></div>
+  <div class="card-row"><span>Day 4 晚</span><span>橘子炸雞 ⬇</span></div>
+  <div class="card-row"><span>Day 5 午</span><span>我們麵館 ⬇</span></div>
 </div>
 
 <div class="card">
@@ -991,12 +1073,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",s
   <div class="card-title">📋 出發前待辦</div>
   <div class="check-cat">🔴 4-6 週前</div>
   <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span>太太們 LINE 諮詢 Now Medi 醫美</span></label>
-  <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span>租車 2 台 7 天（Carnival + Tucson）</span></label>
-  <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span>兒童安全座椅 2 個</span></label>
+  <label class="check-item done"><input type="checkbox" checked onchange="toggleCheck(this)"><span>✅ 租 Carnival 9P (預訂 2622356102 / ₩987,600)</span></label>
+  <label class="check-item done"><input type="checkbox" checked onchange="toggleCheck(this)"><span>✅ 兒童座椅 + Stroller (已含)</span></label>
   <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span>Day 1 接機包車</span></label>
-  <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span>國際駕照 ×3</span></label>
-  <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span>訂 Day 3 Airbnb 西部</span></label>
+  <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span>國際駕照 (主駕 + 副駕)</span></label>
+  <label class="check-item done"><input type="checkbox" checked onchange="toggleCheck(this)"><span>✅ Day 3 Airbnb 西部 (6/26-6/27)</span></label>
   <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span>Regent Marine 訂 6 晚（D1+D2+D4+D5+D6+D7）</span></label>
+  <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span>Airbnb 房東地址 / Wifi / 門卡訊息存截圖</span></label>
 
   <div class="check-cat">🟡 1-2 週前</div>
   <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span>換韓元</span></label>
